@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "p{\r\n    background-color: lightgrey;\r\n    width: 300px;\r\n    border: 5px solid green;\r\n    padding: 20px;\r\n    margin: 20px;\r\n}\r\ntable,tr,th{\r\n    border: 1px solid black;\r\n}\r\n.demo{\r\n    background-color: red;\r\n}\r\n.demo{\r\n    background-color:palevioletred;\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    hello its ashu angular 2 project\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:left\">\n  <h1>\n    1.Interpolation\n  </h1>\n  <p> Defn:Interpolation is the easiest and best known-way of data binding, \n    binding a model properties and methods to a view template using \n    double curly braces is called interpolation</p>\n    <h1>Example</h1>\n <h1>Welcome to {{ title }}!</h1>\n\n <h1>2.One way data binding</h1>\n <p> Defn:It will bind the data from Component to View using the following different ways.</p>\n <h1>Example:</h1>\n<input type=\"text\" [value]=\"name1\"/><br>\nname is:{{name1}}<br>\n\n<h1>3.Two way data binding</h1>\n<p> Defn:The most used use case of two-way databinding in angular Is using it on input field or any other form elements,\n   when we type something in the input on one side the values goes to the model and the back and forth</p>\n   <h1>Example:</h1>\n<input type=\"text\" [(ngModel)]=\"name2\"/><br>\nname is:{{name2}}<br>\n<h1>4.Property Binding</h1>\n<p> Defn:The primary way to bind data in angular 2 is through property binding.\n   This is allowing you to bind values to properties of an element to modify their behavior or appearances\n    Using [] syntax binds to an element property, not the attribute \n    </p>\n    <h1>Example:</h1>\n<img [src]='imgPath'><br>\n<h1>5.Attribute Binding</h1>\n<p> Defn:Attribute binding is same as property binding with the difference that we need to add attr. \n  as prefix with attribute name</p>\n  <h1>Example:</h1>\n  <table>\n    <tr>\n      <th colspan=\"3\">Student Information</th>\n    </tr>\n    <tr>\n      <th>Name</th>\n      <th>Contact</th>\n      <th>Email</th>\n    </tr>\n    <tr>\n      <th>Ashwini</th>\n      <th>936878990</th>\n      <th>ashgc99@gmail.com</th> \n    </tr>\n  </table>\n<h1>6.Event Binding</h1>\n<p> Defn:You can do event binding with any valid html event available, like click, focus, blur, \n  binding will wrap it in () parenthesis.</p><br>\n<h1>Example:</h1>\n<button (click)='display()'>click me</button>\n<h3>7.Class Binding</h3>\n<p> Defn:There are couple of special property bindings for setting a class and style property for an element\n    Class property is used to bind the class name it is used in internal or external\n    </p>\n    <h1>Example:</h1>\n<h3 [class.demo]='value' >Hi</h3>\n<h4>8.Style Binding</h4>\n<P> Defn:Style binding Is used to bind the value for a style in inline</P>\n<h1>Example:</h1>\n<h4 [style.background-color]=\"isImportant?'red': 'blue'\">Hi Hello</h4>\n"
 
 /***/ }),
 
@@ -65,8 +65,16 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'app';
+        this.title = 'Ashwini';
+        this.name1 = "Chincholi";
+        this.name2 = "hi everyone";
+        this.imgPath = "https://www.javatpoint.com/images/logo/jtp_logo.png";
+        this.colspan = 3;
+        this.value = true;
     }
+    AppComponent.prototype.display = function () {
+        console.log("Button clicked");
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
@@ -94,12 +102,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_Forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/Forms */ "./node_modules/@angular/Forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -112,7 +122,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_Forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
@@ -185,7 +195,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Dell User\gc\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\employee1\src\main.ts */"./src/main.ts");
 
 
 /***/ })
